@@ -1,0 +1,370 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+    <!-- Navbar -->
+
+    <nav class="navbar navprod" role="navigation" aria-label="main navigation">
+
+        <!-- Left icon -->
+
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/home" id="logoinit">
+              <img src="../static/imgs/logo2.png" width="130" height="25">
+            </a>
+
+        <!-- Burguer -->
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+
+          </div>
+
+        <!-- Search bar -->
+
+          <div class="dropdown is-active pt-3">
+          <div class="dropdown-trigger">
+              <div class="field">
+                  <p class="control is-expanded has-icons-right">
+                      <input class="input" type="search" placeholder="¿Qué está buscando?"/>
+                      <span class="icon is-small is-right">
+                          <!-- Search icon -->
+                          <i class="fas fa-search">
+                              
+                          </i>
+                      </span>
+                  </p>
+              </div>
+          </div>
+          </div>
+
+        <!-- Links -->
+      
+          <div id="navbarBasicExample" class="navbar-menu">
+
+            <!-- Navbar start -->
+
+              <div class="navbar-start">
+
+                <!-- Inicio -->
+
+                  <a class="navbar-item" href="/home">
+                  Inicio
+                  </a>
+
+                <!-- Productos -->
+
+                  <div class="navbar-item has-dropdown is-hoverable">
+
+                    <a class="navbar-link">
+                        Productos
+                      </a>
+
+                      <div class="navbar-dropdown">
+
+                          <a class="navbar-item" href="/products/calificar">
+                              Calificar productos
+                          </a>
+
+                          <a class="navbar-item">
+                              Mis comentarios
+                          </a>
+
+                      </div>
+                  </div>
+
+                <!-- Categorias -->
+              
+                  <div class="navbar-item has-dropdown is-hoverable">
+                  
+                    <a class="navbar-link">
+                      Categorias
+                    </a>
+                  
+                    <div class="navbar-dropdown">
+                      <a class="navbar-item">
+                          Laptops
+                      </a>
+                      <a class="navbar-item">
+                          Tablets
+                      </a>
+                      <a class="navbar-item">
+                          Smartphones
+                      </a>
+                      <a class="navbar-item">
+                          Otros
+                      </a>
+                      <a class="navbar-item">
+                        Ver todo
+                      </a>
+                    </div>
+                  </div>
+
+                <!-- Cuenta -->
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                      Cuenta
+                    </a>
+                  
+                    <div class="navbar-dropdown">
+                      <a class="navbar-item">
+                          Ingresar
+                      </a>
+                      <a class="navbar-item">
+                          Registrarme
+                      </a>
+                    </div>
+                  </div>
+                
+              </div>
+
+              <div class="navbar-item head">
+                <span class="tag"><i class="fas fa-user"></i>&nbspUsuario</span>
+                <button class="button is-light" id="exit" onclick="location.href= '/home'">Login&nbsp <i class="fas fa-sign-in-alt"></i></button>
+              </div>
+
+          </div>
+
+    </nav>
+
+  <!-- Product list -->
+  
+    <div class="columns is-multiline m-6 vistaproducts">
+
+      <!-- Product 1 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/Acer Nitro.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                  <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                    Acer Nitro 5
+                    <br>
+                    $ 3.899.999
+                  </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 2 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/adaptador jack.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Adaptador Jack 3.5mm
+                  <br>
+                  $ 5.990
+                </p>
+              </footer>
+          </div>
+        </div>
+      
+      <!-- Product 3 -->
+      
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/audifonos xiaomi.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Audífonos Xiaomi Redmi AirDots 2
+                  <br>
+                  $ 55.999
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 4 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/canon sl3.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Camara Canon Sl3 + Lente 18- 55 Is Stm
+                  <br>
+                  $ 3.299.999
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 5 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/celular xiaomi.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Xiaomi Redmi Note 9S
+                  <br>
+                  $ 1.180.900
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 6 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/combo redragon.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Combo Gamer Redragon S101
+                  <br>
+                  $ 189.899
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 7 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/lente 50mm.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Lente Yongnuo 50mm
+                  <br>
+                  $ 379.900
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 8 -->
+      
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/mesa plegable.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Mesa plegable para portátil
+                  <br>
+                  $ 59.800
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 9 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/microfono.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Micrófono SF 666
+                  <br>
+                  $ 32.277
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 10 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/silla gamer.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Silla gamer
+                  <br>
+                  $ 969.590
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 11 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/televisor lg.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Smart TV LG AI ThinQ
+                  <br>
+                  $ 6.999.999
+                </p>
+              </footer>
+          </div>
+        </div>
+
+      <!-- Product 12 -->
+
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card zoom">
+              <div class="card-image">
+                  <figure class="image is-3by2">
+                    <img src="../static/imgs/tripode.jpg" alt="">
+                  </figure>
+              </div>
+              <footer class="card-footer">
+                <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem;">
+                  Tripode profesional
+                  <br>
+                  $ 114.900
+                </p>
+              </footer>
+          </div>
+        </div>
+    
+    </div>
+
+  <!-- JavaScript -->
+
+    <script src="../js/burguerNavbar.js"></script>
+
+{% endblock %}

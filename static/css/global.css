@@ -1,0 +1,373 @@
+.body {
+    font-family: "Montserrat", "Roboto", "sans-serif";
+}
+
+.navbar {
+    background-color: #188eac;
+}
+
+.linkwhite{
+    color: white;
+}
+
+.linkblack {
+ color: black !important;
+}
+
+#logoinit {
+    padding: 0;
+    padding-right: 10px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    background-color: white;
+}
+
+.hero {
+    background-color: #17839e;
+    text-align: center;
+}
+
+.welcome {
+    color: white;
+}
+
+/*estilos products*/
+.field {
+    margin-top: 5px;
+    padding-left: 3px;
+}
+
+.navprod {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    margin-left: 15px;
+}
+.vistaproducts {
+    margin-left: 10px;
+    padding-top: 15px;
+}
+
+.content-logo {
+    text-align: center;
+}
+
+.content-logo img {
+    max-width: 250px;
+}
+
+.container  h1{
+    text-align: center;
+}
+
+.opcion-admin span {
+    background: rgb(223, 223, 224);
+    text-decoration: underline;
+}
+
+
+.head {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.head img {
+    max-width: 15px;
+}
+.head button {
+    font-size: x-small;
+    margin-left: 10px;
+}
+#head-calificar {
+    padding-top: 10px;
+}
+#exit {
+    height: 25px;
+    border-color: rgb(191, 204, 204);
+}
+
+/*Estilos datos iniciales*/
+.tile {
+    min-width: 200px;
+}
+
+.tile .is-child{
+    background-color: rgb(241, 241, 243);
+}
+
+/*final de estilos datos iniciales del dashboard*/
+
+/*aplicar efecto zoom*/
+.zoom {
+    transition: transform .3s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.15); 
+}
+
+/*modal*/
+.button-modal {
+    text-align: center;
+}
+.modal {
+    margin-top: 4%;
+}
+.modal-card {
+    max-height: calc(95vh - 40px);
+}
+
+/* Estilos opciones admin*/
+.adminopcion {
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.tile p {
+    color: rgba(43, 41, 41, 0.726)
+}
+
+.tile a {
+    color: rgba(43, 41, 41, 0.726)
+}
+.tile p :hover {
+    color: #166275;
+}
+
+.tile p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.opcions{
+    display: flex;
+    padding-bottom: 20px;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+.opcion-admin {
+    width: 33%;
+    height: auto;
+    padding: 8px;
+    text-align: center;
+    padding-right: 5px;
+    max-width: 250px;
+}
+
+.op01 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(241, 241, 243);
+}
+
+.buttonsop01 a {
+    height: 25px;
+    width: 70px;
+    font-size: smaller;
+    margin-bottom: 3px;
+    width: auto;
+    border-color: rgb(121, 182, 184);
+}
+
+.coment {
+    display: flex;
+    flex-direction: column;
+}
+.linkcoment {
+    font-size: smaller;
+    padding-left: 2px;
+}
+/*hasta aqui */
+
+
+/*Estilos comentarios*/
+.comments-container {
+    margin: 35px auto;
+    width: 768px;
+    overflow-x: hidden;
+}
+
+.comments-container h4{
+    font-size: 36px;
+    color: black;
+    font-weight: 400;
+    
+}
+
+.comments-list {
+    content: '';
+    position: relative;
+}
+.comments-list li {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+.comments-list li::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+.comments-list .comment-avatar {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 99;
+    float: left;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0,0, 0.2);
+    overflow: hidden;
+
+}
+
+.comments-list .comment-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.comments-list .comment-box {
+    max-width: 500px;
+    float: left;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.15);
+}
+.commment-list .comment-box::after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    border-width: 10px 12px 10px 0;
+    border-style: solid;
+    border-color: transparent #000;
+    top: 0;
+    left: 0;
+}
+
+.comment-box .comment-head {
+    background: #fcfcfc;
+    padding: 12px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+.comment-head svg {
+    position: relative;
+    color: orange;
+}
+.comment-box .comment-autor {
+    color: #283035;
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+    margin-right: 10px;
+}
+
+.comment-content {
+    margin: 5px;
+    background: white;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 0 0 4px 4px;
+}
+.comment-head span {
+    float: left;
+    color: #999;
+    font-size: 13px;
+    position: relative;
+    top: 1px;
+}
+
+/*fin-comentarios*/
+
+
+.content-columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btnpeq {
+    width: 80px;
+}
+
+
+.content-cal {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width: 60%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.content-cal img {
+    max-width: 300px;
+    float: left;
+}
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+    text-align: left;
+  }
+
+  #form p {
+    text-align: left;
+  }
+
+  #form label {
+    font-size: 20px;
+
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    color: grey;
+    cursor: pointer;
+  }
+
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: left;
+  }
+
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+
+  #calificar {
+      height: 26px;
+      width: 61px;
+  }

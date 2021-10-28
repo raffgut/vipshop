@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+
+    <div class="head">
+        <span class="tag"><img src="../static/imgs/user.png" />&nbsp Usuario</span>
+        <button class="button is-light" id="exit" onclick="location.href= '/home'">Salir&nbsp <img src="../static/imgs/exit.png" /></button>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">
+                Añadir Producto
+            </h1>
+            <form action="" class="">
+                <div class="field">
+                    <label for="" class="label">Codigo</label>
+                    <div>
+                        <input class="input" type="text" placeholder="Codigo...">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="" class="label">Nombre</label>
+                    <div>
+                        <input class="input" type="text" placeholder="Nombre...">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="" class="label">Descripcion</label>
+                    <div>
+                        <textarea class="textarea" placeholder="Descripcion..."></textarea>
+
+                    </div>
+                </div>
+
+                <div>
+                    <label for="" class="label">Precio</label>
+                    <div>
+                        <input class="input" type="text" placeholder="Precio...">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="" class="label">Cantidad</label>
+                    <div>
+                        <input class="input" type="number" placeholder="Cantidad...">
+                    </div>
+                </div>
+                <br>
+
+                <div class="file is-success">
+                    <label class="file-label">
+                        <input class="file-input" type="file">
+                        <span class="file-cta">
+                            <span class="file-label">
+                                Subir Imagen…
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <br>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-success">Enviar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancelar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <script src="../static/js/index.js"></script> 
+{% endblock %}

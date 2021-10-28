@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+  <nav class="navbar navprod" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="/" id="logoinit">
+        <img src="../static/imgs/logo2.png" width="130" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item linkwhite" href="/">
+            <i class="fas fa-home"></i>&nbspHome
+        </a>
+
+        <a class="navbar-item linkwhite" href="/products">
+            <i class="fas fa-store"></i>&nbspTienda
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link linkwhite">
+            More
+        </a>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item linkblack" href="/admin">
+            Mis comentarios
+            </a>
+            <a class="navbar-item linkblack">
+            Contact
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <div class="navbar-item head">
+      <span class="tag"><i class="fas fa-user"></i>&nbspUsuario</span>
+      <button class="button is-light" id="exit" onclick="location.href= '/home'">Logout&nbsp <i class="fas fa-sign-out-alt"></i></button>
+    </div>
+
+
+    </div>
+  </nav>
+    
+  <hr style="margin-top: 5px; margin-bottom: 5px;">
+
+    <div class="content-cal">
+      <h3 class="subtitle is-5"><strong> Listado de productos:</strong></h3>
+      
+        <div class="product">
+          <hr style="margin-top: 5px; margin-bottom: 5px;">
+          <img src="../static/imgs/MacBookProCopia.jpg" />
+          <aside style="padding-top: 80px;"><strong>MacBook Pro 13-inch: Apple M1 chip con 8‑core CPU y 8‑core GPU, 256GB SSD - Gris Espacial</strong></aside>
+          <br>
+          <aside><strong>Precio: $6.999.000</strong></aside>
+          <br>
+          <form>
+            <p class="clasificacion">
+              <input id="radio1" type="radio" name="estrellas" value="5"><!--
+            --><label for="radio1">★</label><!--
+            --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+            --><label for="radio2">★</label><!--
+            --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+            --><label for="radio3">★</label><!--
+            --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+            --><label for="radio4">★</label><!--
+            --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+            --><label for="radio5">★</label>
+            </p>
+            <div class="coment">
+              <textarea style="max-width: 400px;" class="textarea is-small" placeholder="Deja tu comentario sobre este producto..."></textarea>
+              <button type="submit"  class="button is-small is-light" style="margin-top: 3px; border-color: rgb(91, 169, 172);" id="calificar" onclick="calificar()">Enviar</button>
+            </div>
+          </form>
+
+          <div class="content-modal">
+            <div class="button-modal">
+              <button class="button is-small openmodal" style="margin-top: 3px; border: 0; color: blue; text-decoration: underline; padding-left: 1px;" data-modal="modal">Ver comentarios y calificaciones</button>
+            </div>
+            <div class="modal">
+              <div class="modal-background">
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                  <p class="modal-card-title">Comentarios y calificaciones</p>
+                  <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <div>
+                      <img src="../static/imgs/MacBookProCopia.jpg" style="max-width: 150px;">
+                      <br>
+                      <br>
+                      <aside>
+                        <strong>MacBook Pro 13-inch: Apple M1 chip</strong><br>
+                        <strong>Precio: $6.999.000</strong>                       
+                      </aside>
+                    </div>
+                    <div class="comments-container" style="font-family: 'Roboto', sans-serif, arial;">
+                      <ul class="comments-list">
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/pp.png" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">Rafael G</h6>
+                                <span>oct.21-2021 10:00 am </span><br/>
+                                <input id="radio1" type="radio" name="estrellas">
+                                <label for="radio1" style="color: orange;">★★★★</label>
+                              </div>
+                              <div class="comment-content">
+                                Es una excelente máquina, muy rápida y bastante eficiente. Cumple lo que promete.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/CC.png" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">Maria P</h6>
+                                <span>oct.21-2021 08:55 pm </span><br/>
+                                <input id="radio1" type="radio" name="estrellas">
+                                <label for="radio1" style="color: orange;">★★★★★</label>
+                              </div>
+                              <div class="comment-content">
+                                Sinceramente superó mis espectativas, es un equipo de excelente rendimiento. Realizo en él todas mis actividades sin ningun problema.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/adl.png" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">Juan S</h6>
+                                <span>oct.21-2021 02:44 pm </span><br/>
+                                <input id="radio1" type="radio" name="estrellas">
+                                <label for="radio1" style="color: orange;">★★★★</label>
+                              </div>
+                              <div class="comment-content">
+                                Es un muy buen equipo, solo que por su precio depronto esperas un poquito más de capacidad, pero en general es una de las mejores opciones del mercado.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button closemodal">Volver</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product">
+          <hr style="margin-top: 5px; margin-bottom: 5px;">
+          <img src="../static/imgs/SamsungTabA7.jpg" />
+          <aside style="padding-top: 80px;"><strong>Tablet Samsung Galaxy Tab A7 10.1" 64gb</strong></aside>
+          <br>
+          <aside><strong>Precio: $769.000</strong></aside>
+          <br>
+          <form>
+            <p class="clasificacion">
+              <input id="radio1" type="radio" name="estrellas" value="5"><!--
+            --><label for="radio1">★</label><!--
+            --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+            --><label for="radio2">★</label><!--
+            --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+            --><label for="radio3">★</label><!--
+            --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+            --><label for="radio4">★</label><!--
+            --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+            --><label for="radio5">★</label>
+            </p>
+            <div class="coment">
+              <textarea style="max-width: 400px;" class="textarea is-small" placeholder="Deja tu comentario sobre este producto..."></textarea>
+              <button type="submit"  class="button is-small is-light" style="margin-top: 3px; border-color: rgb(91, 169, 172);" id="calificar" onclick="calificar()">Enviar</button>
+            </div>
+          </form>
+
+          <div class="content-modal">
+            <div class="button-modal">
+              <button class="button is-small openmodal" style="margin-top: 3px; border: 0; color: blue; text-decoration: underline; padding-left: 1px;" data-modal="modal">Ver comentarios y calificaciones</button>
+            </div>
+            <div class="modal">
+              <div class="modal-background">
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                  <p class="modal-card-title">Comentarios y calificaciones</p>
+                  <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <div>
+                      <img src="../static/imgs/SamsungTabA7.jpg" style="max-width: 150px;">
+                      <br>
+                      <br>
+                      <aside>
+                        <strong>Tablet Samsung Galaxy Tab A7 10.1" 64gb</strong><br>
+                        <strong>Precio: $739.900</strong>                       
+                      </aside>
+                    </div>
+                    <div class="comments-container" style="font-family: 'Roboto', sans-serif, arial;">
+                      <ul class="comments-list">
+
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/CC.png" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">Maria P</h6>
+                                <span>oct.21-2021 07:11 pm </span><br/>
+                                <input id="radio1" type="radio" name="estrellas">
+                                <label for="radio1" style="color: orange;">★★★★★</label>
+                              </div>
+                              <div class="comment-content">
+                                Sinceramente superó mis espectativas, es un equipo de excelente rendimiento. Es bastante fluida la respuesta de su pantalla.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/adl.png" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">Juan S</h6>
+                                <span>oct.21-2021 05:15 pm </span><br/>
+                                <input id="radio1" type="radio" name="estrellas">
+                                <label for="radio1" style="color: orange;">★★★★</label>
+                              </div>
+                              <div class="comment-content">
+                                Es un muy buen equipo aunque yo le pediría un poco más de memoria, pero en general es una muy buena opción en el mercado.
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button closemodal">Volver</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../static/js/calificar.js"></script>
+    <script>
+        function calificar(){
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            text: 'Se guardó el registro con éxito',
+            width: '400',
+            showConfirmButton: false,
+            timer: 1800
+          })
+        }
+        
+    </script>
+
+    
+{% endblock %}

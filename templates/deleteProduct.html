@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+
+  <!-- Navbar -->
+
+  <nav class="navbar navprod" role="navigation" aria-label="main navigation">
+
+    <!-- Left icon -->
+
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/home" id="logoinit">
+        <img src="../static/imgs/logo2.png" width="130" height="25">
+      </a>
+      <!-- Burguer -->
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <!-- Search bar -->
+
+    <div class="dropdown is-active pt-3">
+      <div class="dropdown-trigger">
+        <div class="field">
+          <p class="control is-expanded has-icons-right">
+            <input class="input" type="search" placeholder="¿Qué está buscando?" />
+            <span class="icon is-small is-right">
+              <!-- Search icon -->
+              <i class="fas fa-search">
+
+              </i>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Links -->
+
+    <div id="navbarBasicExample" class="navbar-menu">
+
+      <!-- Navbar start -->
+
+      <div class="navbar-start">
+
+        <!-- Inicio -->
+
+        <a class="navbar-item" href="/home">
+          Inicio
+        </a>
+
+        <a class="navbar-item" href="/admin">
+          Admin Dashboard
+        </a>
+
+        <!-- Productos -->
+
+        <div class="navbar-item has-dropdown is-hoverable">
+
+          <a class="navbar-link">
+            Productos
+          </a>
+
+          <div class="navbar-dropdown">
+
+            <a class="navbar-item">
+              Ver productos
+            </a>
+
+            <a class="navbar-item">
+              Agregar productos
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Categorias -->
+
+        <div class="navbar-item has-dropdown is-hoverable">
+
+          <a class="navbar-link">
+            Categorias
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Categoria 1
+            </a>
+            <a class="navbar-item">
+              Categoria 2
+            </a>
+            <a class="navbar-item">
+              Categoria 3
+            </a>
+            <a class="navbar-item">
+              Categoria 4
+            </a>
+          </div>
+        </div>
+
+        <!-- Cuenta -->
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Cuenta
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Ingresar
+            </a>
+            <a class="navbar-item">
+              Crear
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navbar end -->
+
+      <div class="navbar-end">
+
+      </div>
+
+      <div class="navbar-item head">
+        <span class="tag"><i class="fas fa-user"></i>&nbspAdmin</span>
+        <button class="button is-light" id="exit" onclick="location.href= '/home'">Logout&nbsp <i class="fas fa-sign-out-alt"></i></button>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- Space -->
+
+
+
+  <!-- General container -->
+
+  <div class="columns" style="padding: 80px;">
+
+    <!-- Left column -->
+
+    <div class="column is-half" style="position: relative;">
+
+      <div style="position: absolute; top: 20%; width: 600px; height: 500px;">
+        <div class="card-image">
+          <figure class="image is-3by2">
+            <img src="../static/imgs/Acer Nitro.jpg" alt="">
+          </figure>
+        </div>
+        <footer class="card-footer">
+          <p style="text-align: center; margin-left: auto; margin-right: auto; padding: 1rem; font-size: 40px;">
+            $ 3.899.999
+          </p>
+        </footer>
+      </div>
+
+    </div>
+
+    <!-- Right column -->
+
+    <div class="column">
+
+      <p style="font-size: 40px;">
+        <strong>Acer Nitro 5</strong>
+      </p>
+
+      <br>
+
+      <p>
+        Acer Nitro 5 AN515-45-R83Z Gaming Laptop comes with these high level specs: AMD Ryzen 5 5600H Hexa-Core
+        Processor 3.3GHz with Precision Boost up to 4.2GHz, 15.6" Full HD (1920 x 108) Widescreen LED-backlit IPS
+        Display with 144Hz Refresh Rate, 16:9 Aspect Ratio, NVIDIA GeForce GTX 1650 with 4 GB of dedicated GDDR6 VRAM,
+        8GB DDR4 3200MHz Memory, 256GB PCIe NVMe SSD (2 x PCIe M.2 Slots | 1 Slot Available), 1 - Available Hard Drive
+        Bay, DTS: X Ultra Audio, Acer True Harmony Technology, Two Built-in Stereo Speakers, Acer Purified.Voice
+        technology with two built-in microphones, 802.11ax Wi-Fi 6 Dual-Band 2.4GHz and 5GHz featuring 2x2 MU-MIMO
+        technology, Killer Ethernet E2600 10/100/1000 Gigabit Ethernet LAN, Bluetooth 5.1, HD Webcam (1280 x 720)
+        supporting Super High Dynamic Range (SHDR), 1 - USB 3.2 Type C Gen 2 port (up to 10 Gbps), 1 - USB 3.2 Gen 2
+        Port (featuring Power-off Charging), 2 - USB 3.2 ports, 1 - HDMI 2.1 Port with HDCP Support, Red Backlit
+        Keyboard, Windows 10 Home, Lithium Ion Battery, Up to 10-hours Battery Life, 4.85 lbs. | 2.2 kg (system unit
+        only) (NH.QB9AA.003)
+        Standing screen display size 15.6 Inches
+        Max Screen Resolution 1920 x 1080 Pixels
+        Processor 4.2 GHz amd_ryzen_5_5600x
+        RAM 8 GB DDR4
+        Memory Speed 3200 MHz
+        Hard Drive SSD
+        Graphics Coprocessor NVIDIA GeForce GTX 1650
+        Chipset Brand NVIDIA
+        Card Description Dedicated
+        Wireless Type Bluetooth
+        Number of USB 3.0 Ports 4
+        Average Battery Life (in hours) 10 Hours
+        Other Technical Details
+        Brand Acer
+        Series AN515-45-R83Z
+        Item model number AN515-45-R83Z
+        Operating System Windows 10 Home
+        Item Weight 4.85 pounds
+        Product Dimensions 14.31 x 10.04 x 0.94 inches
+        Item Dimensions LxWxH 14.31 x 10.04 x 0.94 inches
+        Color Black
+        Processor Brand AMD
+        Processor Count 6
+        Computer Memory Type DDR4 SDRAM
+        Flash Memory Size 256
+        Hard Drive Interface USB 3.2
+        Optical Drive Type No Optical Drive
+        Power Source Battery Powered
+        Batteries 1 Lithium ion batteries required. (included)
+      </p>
+
+      <br>
+      <br>
+
+      <div class="buttons">
+        <button class="button is-primary">Eliminar producto</button>
+        <button class="button is-primary">Guardar cambios</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+
+  <script src="../js/burguerNavbar.js"></script>
+  <script src="../static/js/index.js"></script> 
+
+  {% endblock %}

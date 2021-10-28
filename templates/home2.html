@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+        <a class="navbar-item" href="/" id="logoinit">
+            <img src="../static/imgs/logo2.png" width="130" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        </div>
+    
+        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item linkwhite" href="/">
+                <i class="fas fa-home"></i>&nbspHome
+            </a>
+    
+            <a class="navbar-item linkwhite" href="/products">
+                <i class="fas fa-store"></i>&nbspTienda
+            </a>
+    
+            <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link linkwhite">
+                More
+            </a>
+    
+            <div class="navbar-dropdown">
+                <a class="navbar-item linkblack" href="/admin">
+                Admin Dasboard
+                </a>
+                <a class="navbar-item linkblack">
+                Contact
+                </a>
+            </div>
+            </div>
+        </div>
+    
+        <div class="navbar-end">
+            <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-primary">
+                <strong>Sign up</strong>
+                </a>
+                <a class="button is-light">
+                Log in
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <section class="hero  is-medium  is-bold">
+        <div class="hero-body ">
+            <div class="container">
+                <h1 class="title is-2 welcome">VipShopHoldings</h1>
+                <p class="subtitle is-3 welcome">Equipos con la mejor tecnología y calidad garantizada</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero  is-medium  is-light">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-multiline is-centered">
+                    
+                        <div class="column is-4 has-text-centered">
+                            
+                            <div class="icon callout-icon">
+                            
+                                <i class="fas fa-laptop fa-3x"></i>
+                            
+                            </div>
+                            
+                            <p class="title is-5">Laptops</p>
+                            <p class="subtitle is-5">De última generación</p>
+               
+                        </div>
+                    
+                        <div class="column is-4 has-text-centered">
+                            
+                            <div class="icon callout-icon">
+                            
+                                <i class="fas fa-mobile-alt fa-3x"></i>
+                            
+                            </div>
+                            
+                            <p class="title is-5">Smartphones</p>
+                            <p class="subtitle is-5">Con la mejor tecnología</p>
+              
+                        </div>
+                    
+                        <div class="column is-4 has-text-centered">
+                            
+                            <div class="icon callout-icon">
+                            
+                                <i class="fas fa-tablet-alt fa-3x"></i>
+                            
+                            </div>
+                            
+                            <p class="title is-5">Tablets</p>
+                            <p class="subtitle is-5">Las más demandas del mercado</p>
+        
+                        </div>
+                    
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div>
+                <p class="title is-5">Y mucho más...</p>
+            </div>
+        </div>
+    </section>
+
+   <script src="../static/js/index.js"></script> 
+{% endblock %}
