@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block cuerpo %}
-  <div class="contenedor">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="micontenedor" style="margin-bottom: 5%;">
+    <nav class="navbar navprod" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
       <a class="navbar-item" href="/" id="logoinit">
           <img src="../static/imgs/logo2.png" width="130" height="28">
@@ -90,9 +90,9 @@
                   <article class="tile is-child box">
                       <p class="title is-3">Productos</p>
                       <img src="../static/imgs/products.png" alt="Productos" style="max-width: 85%;">
-                      <p class="subtitle zoom"><a><i class="fas fa-laptop" style="max-width: 35px;"></i><i class="fas fa-plus-circle" style="max-width: 10px;"></i> Agregar</a></p>
+                      <p class="subtitle zoom"><a href="/admin/anadirproductos"><i class="fas fa-laptop" style="max-width: 35px;"></i><i class="fas fa-plus-circle" style="max-width: 10px;"></i> Agregar</a></p>
                       <p class="subtitle zoom"><a><i class="fas fa-laptop" style="max-width: 35px;"></i><i class="fas fa-sync-alt" style="max-width: 10px;"></i> Actualizar</a></p>
-                      <p class="subtitle zoom"><a><i class="fas fa-laptop" style="max-width: 35px;"></i><i class="fas fa-minus-circle" style="max-width: 10px;"></i> Eliminar</a></p>
+                      <p class="subtitle zoom"><a href="/admin/deleteproduct"><i class="fas fa-laptop" style="max-width: 35px;"></i><i class="fas fa-minus-circle" style="max-width: 10px;"></i> Eliminar</a></p>
                   </article>
               </div>
               <div class="tile is-parent adminopcion">

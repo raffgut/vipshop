@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+  <nav class="navbar navprod" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="/" id="logoinit">
+        <img src="../static/imgs/logo2.png" width="130" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item linkwhite" href="/">
+            <i class="fas fa-home"></i>&nbspHome
+        </a>
+
+        <a class="navbar-item linkwhite" href="/products">
+            <i class="fas fa-store"></i>&nbspTienda
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link linkwhite">
+            More
+        </a>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item linkblack" href="">
+            Mis comentarios
+            </a>
+            <a class="navbar-item linkblack" href="/wishlist">
+            Mis Favoritos
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <div class="navbar-item head">
+      <span class="tag"><i class="fas fa-user"></i>&nbsp{{username}}</span>
+      <button class="button is-light" id="exit" onclick="location.href= '/home'">Logout&nbsp <i class="fas fa-sign-out-alt"></i></button>
+    </div>
+
+
+    </div>
+  </nav>
+    
+  <hr style="margin-top: 5px; margin-bottom: 5px;">
+
+    <div class="content-cal">
+      <h3 class="subtitle is-5"><strong> Listado de productos:</strong></h3>
+  
+      {% for product in products %} 
+        <div class="product">
+          <hr style="margin-top: 5px; margin-bottom: 5px;">
+          <img src="../static/imgs/{{product[4]}}" />
+          <aside style="padding-top: 20px;"><strong>{{ product[1] }}</strong></aside>
+          <aside style="padding-top: 0px;">{{ product[2] }}</aside>
+          <br>
+          <aside><strong>Precio: ${{ '{:,}'.format(product[3]).replace(',','~').replace('.',',').replace('~','.') }}</strong></aside>
+          <br>
+          <form action="/products/calificar" method="POST">
+            <div class="calificacion" style="text-align: left;">
+              <span style="font-size: smaller;">Califica</span>
+              <p class="clasificacion">
+                <input id="radio{{product[0]}}-A" type="radio" name="estrellas" value="5"><!--
+              --><label for="radio{{product[0]}}-A">★</label><!--
+              --><input id="radio{{product[0]}}-B" type="radio" name="estrellas" value="4"><!--
+              --><label for="radio{{product[0]}}-B">★</label><!--
+              --><input id="radio{{product[0]}}-C" type="radio" name="estrellas" value="3"><!--
+              --><label for="radio{{product[0]}}-C">★</label><!--
+              --><input id="radio{{product[0]}}-D" type="radio" name="estrellas" value="2"><!--
+              --><label for="radio{{product[0]}}-D">★</label><!--
+              --><input id="radio{{product[0]}}-E" type="radio" name="estrellas" value="1"><!--
+              --><label for="radio{{product[0]}}-E">★</label>
+              </p>
+            </div>
+            <div class="coment">
+              <textarea name="comentario" style="max-width: 400px;" class="textarea is-small" placeholder="Deja tu comentario sobre este producto..."></textarea>
+              <input type="text" name="codprod" style="visibility: hidden;" value="{{ product[0] }}">
+              <button type="submit"  class="button is-small is-light" style="margin-top: 3px; border-color: rgb(91, 169, 172);" id="calificar" onclick="calificar()">Enviar</button>
+            </div>
+          </form>
+
+          <div class="content-modal">
+            <div class="button-modal">
+              <button class="button is-small openmodal" style="margin-top: 3px; border: 0; color: blue; text-decoration: underline; padding-left: 1px;" data-modal="modal">Ver comentarios y calificaciones</button>
+            </div>
+            <div class="modal">
+              <div class="modal-background">
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                  <p class="modal-card-title">Comentarios y calificaciones</p>
+                  <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <div>
+                      <img src="../static/imgs/{{product[4]}}" style="max-width: 150px;">
+                      <br>
+                      <br>
+                      <aside>
+                        <strong>{{ product[1] }}</strong><br>
+                        <strong>Precio: ${{ '{:,}'.format(product[3]).replace(',','~').replace('.',',').replace('~','.') }}</strong>                       
+                      </aside>
+                    </div>
+                  
+                    <div class="comments-container" style="font-family: 'Roboto', sans-serif, arial;">
+                      <ul class="comments-list">
+                      {% if comments[product[0]] %}
+
+                        {% for comment in comments[product[0]] %}
+                        <li>
+                          <div class="comment-main-level">
+                            <div class="comment-avatar"><img src="../static/imgs/users/{{comment[5]}}" style="max-width: 45px;"/></div>
+                            <div class="comment-box">
+                              <div class="comment-head">
+                                <h6 class="comment-autor">{{ comment[0] }}</h6>
+                                <span>{{ comment[4] }}</span><br/>
+                                {% for i in range(comment[2]) %}
+                                  <input id="radio1" type="radio" name="estrellas">
+                                  <label for="radio1" style="color: orange;">★</label>
+                                {% endfor%}
+                              </div>
+                              <div class="comment-content">
+                                {{ comment[3] }}
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        {% endfor %}
+                        {% else %}
+                          <h1 class="subtitle is-4">No hay comentarios para mostrar</h1>
+                      {% endif %}
+                      </div>
+                      </ul>
+                       
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button closemodal">Volver</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <ul class=flashes>
+        {% for category, message in messages %}
+        <script>
+          Swal.fire({
+          position: 'center',
+          icon: '{{category}}',
+          text: '{{message}}',
+          width: '400',
+          showConfirmButton: false,
+          timer: 1800
+        })
+      </script>
+        {% endfor %}
+        </ul>
+        {% endif %}
+      {% endwith %}
+      
+    </div>
+   
+    
+    <script src="../static/js/calificar.js"></script>
+
+    
+
+    
+{% endblock %}

@@ -1,10 +1,53 @@
 {% extends "base.html" %}
 {% block cuerpo %}
 
-    <div class="head">
-        <span class="tag"><img src="../static/imgs/user.png" />&nbsp Usuario</span>
-        <button class="button is-light" id="exit" onclick="location.href= '/home'">Salir&nbsp <img src="../static/imgs/exit.png" /></button>
+<nav class="navbar navprod" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="/" id="logoinit">
+        <img src="../static/imgs/logo2.png" width="130" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
     </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item linkwhite" href="/">
+            <i class="fas fa-home"></i>&nbspHome
+        </a>
+
+        <a class="navbar-item linkwhite" href="/products">
+            <i class="fas fa-store"></i>&nbspTienda
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link linkwhite">
+            More
+        </a>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item linkblack" href="/admin">
+            Admin Dashboard
+            </a>
+            <a class="navbar-item linkblack" href="/wishlist">
+            Gestionar comentarios
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <div class="navbar-item head">
+      <span class="tag"><i class="fas fa-user"></i>&nbspUsuario</span>
+      <button class="button is-light" id="exit" onclick="location.href= '/home'">Logout&nbsp <i class="fas fa-sign-out-alt"></i></button>
+    </div>
+
+
+    </div>
+  </nav>
 
     <section class="section">
         <div class="container">

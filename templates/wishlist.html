@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block cuerpo %}
+  <nav class="navbar navprod" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="/" id="logoinit">
+        <img src="../static/imgs/logo2.png" width="130" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <a class="navbar-item linkwhite" href="/">
+            <i class="fas fa-home"></i>&nbspHome
+        </a>
+
+        <a class="navbar-item linkwhite" href="/products">
+            <i class="fas fa-store"></i>&nbspTienda
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link linkwhite">
+            More
+        </a>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item linkblack" href="">
+            Mis comentarios
+            </a>
+            <a class="navbar-item linkblack" href="/products/calificar">
+            Calificar Productos
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <div class="navbar-item head">
+      <span class="tag"><i class="fas fa-user"></i>&nbspUsuario</span>
+      <button class="button is-light" id="exit" onclick="location.href= '/home'">Logout&nbsp <i class="fas fa-sign-out-alt"></i></button>
+    </div>
+
+
+    </div>
+  </nav>    
+
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo title is-3">Mis Favoritos </h2>
+            <div class="contenedor-sobre-nosotros">
+                <!--img src="img/face1.jpg" alt="" class="imagen-about-us"-->
+                <div class="contenido-textos">
+                    <div class="box"> <img style= "border: 13px solid; color: white;" src="../static/imgs/bcc950.jpg" align="left"> 
+					<h3>Camara Logitech BCC590</h3>
+                    <p>Solución de videoconferencia de escritorio para oficinas privadas, oficinas en casa y casi cualquier espacio semiprivado </p>
+					<div class="buttons">
+					<button class="button is-success">Comprar</button> <button class="button is-success">Eliminar</button></div>
+					<p>
+					<p>
+                    <div class="box"> <img style= "border: 20px solid; color: white;" src="../static/imgs/Audi.jpg" align="left">
+					<h3>Audifonos Inalambricos Cromados</h3>
+                    <p>Mejor rendimiento, una mejor accesibilidad y comodidad, una experiencia bastante gratificante para disfrutar de un audio fuerte y claro</p>
+					<button class="button is-success">Comprar</button> <button class="button is-success">Eliminar</button></div> 
+					<p>
+					<p>
+					<div class="box"><img style= "border: 20px solid; color: white;" src="../static/imgs/ryzen.jpg" align="left">
+					<h3>PC Gamer Ryzen 5 5600g</h3>
+                    <p>Ofrece una gran potencia y capacidad para disfrutar de un sin fin de actividades, juegos, videos, grabaciones, algo realmente magnifico </p>
+					<button class="button is-success">Comprar</button> <button class="button is-success">Eliminar</button></div>
+					<p>
+					<p>
+					<p>
+					<div class="box"><img style= "border: 20px solid; color: white;" src="../static/imgs/DELL.jpg" align="left">
+                    <h3>DELL U4919DW Pantalla </h3>
+                    <p>Observa toto lo que gustes y disfruta de una gran calidad, y una mejor percepcion de imagen</p>
+					<button class="button is-success">Comprar</button> <button class="button is-success">Eliminar</button></div>
+					<p>
+					
+					
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Recomendaciones</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="../static/imgs/img1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Telefonos</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="../static/imgs/img2.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Camaras</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="../static/imgs/img3.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="../static/imgs/icono1.png" alt="">
+                            <p>Tabletas</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="../static/imgs/lap.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="../static/imgs/icono1.png" alt="">
+                            <p>Computadores</p>
+                        </div>
+                    </div>
+                    
+        <h2 class="titulo-final"> VipShop  </h2>
+    </footer>
+{% endblock %}
